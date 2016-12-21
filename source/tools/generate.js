@@ -1,5 +1,6 @@
 import { parseString } from 'xml2js'
 import Promise from 'bluebird'
+import included_countries from '../../included_countries'
 
 import as_you_type from '../as you type'
 
@@ -81,6 +82,9 @@ export default function(input)
 		{
 			// A two-letter country code
 			const country_code = territory.$.id
+			if (!included_countries.has(country_code)) {
+				continue;
+			}
 
 			// Country metadata
 			const country =
