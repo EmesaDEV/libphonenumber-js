@@ -40,7 +40,7 @@
     "clean-for-build": "rimraf ./build/**/*",
     "build-modules": "babel ./source --optional runtime --out-dir ./build --source-maps",
     "build": "npm-run-all clean-for-build build-modules",
-    "prepublish": "npm-run-all build test browser-build"
+    "prepublish": "npm-run-all build browser-build"
   },
   "repository": {
     "type": "git",
