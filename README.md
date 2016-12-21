@@ -1,3 +1,20 @@
+# Emesa custom build
+
+Reduce size of the library including only required countries. How to build:
+```
+# For creating the custom build of libphonenumber-js lib
+git clone https://github.com/EmesaDEV/libphonenumber-js
+cd libphonenumber-js
+npm i
+# See the compiled lib in bundle/libphonenumber-js.min.js
+# If you want to update the included countries list
+# edit included_countries.js
+npm run metadata:generate
+npm run browser-build
+```
+
+More info: https://emesadev.atlassian.net/wiki/display/TPT/Creating+a+custom+build+for+libphonenumber-js+library
+
 # libphonenumber-js
 
 [![NPM Version][npm-badge]][npm]
